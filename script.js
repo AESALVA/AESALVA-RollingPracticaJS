@@ -18,3 +18,17 @@ const indumentaria = ['camisa', 'pantalon', 'zapatillas','medias','campera'];
 let vestimenta = [indumentaria];
 console.log(indumentaria);
 
+let numero1 = 5;
+let numero2 = 8;
+let suma = numero1 + numero2;
+console.log(suma);
+
+let comparacion = numero1 > numero2;
+console.log(comparacion);
+
+let diferente = numero1 != numero2;
+console.log(diferente);
+
+let concatenacion = 'texto' + numero1;
+console.log(concatenacion);
+
