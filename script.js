@@ -31,4 +31,4 @@ console.log(diferente);
 
 let concatenacion = 'texto' + numero1;
 console.log(concatenacion);
- 
+
