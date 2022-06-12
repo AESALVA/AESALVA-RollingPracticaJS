@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+body {
+  background-color: teal;
+  color: gainsboro;
+  font-family: 'Oswald', monospace;
+}
+
+h1 {
+  color: goldenrod;
+  text-align: center;
+}
+
+h4 span {
+  color: violet;
+}
