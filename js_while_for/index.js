@@ -68,6 +68,7 @@
 
 // Simule un ingreso de un numero de telefono en un formulario y valide si el dato es correcto por la cantidad de digitos.
 
+/*
 
 let telefono = prompt("Ingrese su numero de telefono");
 
@@ -79,7 +80,7 @@ while(telefono.length < 6 || telefono.length > 6){
 }
 
 
-
+*/
 
 
 
@@ -88,23 +89,75 @@ while(telefono.length < 6 || telefono.length > 6){
 
 // (AHORA CON FOR) Escribe un algoritmo que muestre los numeros del 1 al 10.
 
-// for (let index = 1; index < 11; index++) {
-// Bloque de codigo
-// 	alert(index);
-// }
+/*
+ for (let index = 1; index < 11; index++) {
+ 
+ 	alert(index);
+ }
+
+ */
+
+
 
 // (AHORA CON FOR) Escribe un algoritmo que muestre los numeros del 1 al 10 de mayor a menor.
 
 // for (let registrosDeLaBaseDeDatos = 10; registrosDeLaBaseDeDatos > 0; registrosDeLaBaseDeDatos--) {
-// // Bloque de codigo
+
 // 	alert(registrosDeLaBaseDeDatos);
 // }
 
 // (AHORA CON FOR) Escribe un algoritmo que muestre si cada uno de los numeros del 1 al 10 son múltiplos de 2.
 
+/*
+
+for (let index = 1; index < 11; index++){
+    if (index%2===0){
+        alert(index + " es multiplo de dos");
+    }
+}
+
+*/
+
+
 // Escribe un algoritmo que muestre solo los numeros pares del 1 al 10
 
+/*
+
+for (let index = 1; index < 11; index++){
+    if (index%2===0){
+        alert(index);
+    }
+}
+
+*/
+
+
+
+
 // Genere CON LAS HERRAMIENTAS QUE TENEMOS HASTA AHORA un juego de 10 preguntas y respuestas donde cada respuesta correcta sume un punto. Al final del juego debe mostrar cuantos puntos sumo el jugador.
+
+
+let pregunta1 = prompt("2 es numero impar?");
+let respuesta1 = pregunta1;
+
+
+if (respuesta1 === "si"){
+    alert("0 puntos");
+} else if (respuesta1 === "no"){
+    alert("1 puntos");
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // let puntuacion = 0;
