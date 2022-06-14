@@ -142,10 +142,25 @@ let respuesta1 = pregunta1;
 
 
 if (respuesta1 === "si"){
-    alert("0 puntos");
+    punto1 = 0;
+    alert(0 ,"puntos");
 } else if (respuesta1 === "no"){
-    alert("1 puntos");
+    punto1 = 1;
+    alert(1 ,"puntos");
 }
+
+let pregunta2 = prompt("5 por 5 es?");
+let respuesta2 = pregunta2;
+
+if (respuesta2 == 25){
+    punto2 = 1;
+    alert("1 puntos");
+} else if( respuesta2 !== 25){
+    punto2 = 0;
+    alert("0 puntos");
+}
+
+alert(punto1 + punto2);
 
 
 
