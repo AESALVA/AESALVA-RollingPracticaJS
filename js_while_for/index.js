@@ -135,7 +135,9 @@ for (let index = 1; index < 11; index++){
 
 
 // Genere CON LAS HERRAMIENTAS QUE TENEMOS HASTA AHORA un juego de 10 preguntas y respuestas donde cada respuesta correcta sume un punto. Al final del juego debe mostrar cuantos puntos sumo el jugador.
+  
 
+/*
 
 let pregunta1 = prompt("2 es numero impar?");
 let respuesta1 = pregunta1;
@@ -163,14 +165,7 @@ if (respuesta2 == 25){
 alert(punto1 + punto2);
 
 
-
-
-
-
-
-
-
-
+*/
 
 
 
@@ -225,5 +220,42 @@ for (let index = 0; index < array.length; index++) {
 
 
 // Genere CON LAS HERRAMIENTAS QUE TENEMOS HASTA AHORA un algoritmo que pida dos numeros y la operacion a realizar (+, -, *, /) y muestre el resultado. Validar que los datos ingresados sean correctos y volver a pedirlos si es necesario.
+
+
+
+let num1 = parseInt(prompt("primer numero"));
+let num2 = parseInt(prompt("segundo numero"));
+let operacion = prompt("ingrese la operacion");
+
+
+function sumar(numero1, numero2) {
+    return numero1 + numero2;
+}
+
+function restar(numero1, numero2) {
+    return numero1 - numero2;
+}
+
+function multiplicar(numero1, numero2) {
+    return numero1 * numero2;
+}
+
+function dividir(numero1, numero2) {
+    return numero1 / numero2;
+}
+
+if (operacion === "sumar"){
+    alert(sumar(num1,num2));
+}
+else if (operacion === "restar"){
+    alert(restar(num1,num2));
+}
+else if (operacion === "multiplicar"){
+    alert(multiplicar(num1, num2));
+}
+else if (operacion === "dividir"){
+    alert(dividir(num1, num2));
+}
+else alert("no ingreso una operacion permitida");
 
 
