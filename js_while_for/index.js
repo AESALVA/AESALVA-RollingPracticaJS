@@ -221,7 +221,7 @@ for (let index = 0; index < array.length; index++) {
 
 // Genere CON LAS HERRAMIENTAS QUE TENEMOS HASTA AHORA un algoritmo que pida dos numeros y la operacion a realizar (+, -, *, /) y muestre el resultado. Validar que los datos ingresados sean correctos y volver a pedirlos si es necesario.
 
-
+/*
 
 let num1 = parseInt(prompt("primer numero"));
 let num2 = parseInt(prompt("segundo numero"));
@@ -257,5 +257,56 @@ else if (operacion === "dividir"){
     alert(dividir(num1, num2));
 }
 else alert("no ingreso una operacion permitida");
+
+
+
+*/
+
+// CLASE 16/06/22
+
+// fubciones de arrays
+/*
+let lista1 = ['1','2','3','4'];
+*/
+
+// foreach  |  POR cada elemento
+/*
+lista1.forEach((lista) => {console.log(lista)});    // array en plural , elemento singular
+
+// map | CON cada elemento , todas las veces va a devolver algo
+
+let nuevoarray = lista1.map((lista)=>{return lista + ' del map'});
+
+console.log(nuevoarray);
+*/
+// FILTER  armar un nuevo array con los elementos que coincidan
+
+let mascota1 = {nombre:'michi', edad:9};
+let mascota2 = {nombre:'rata', edad:1};
+let mascota3 = {nombre:'Siro', edad:12};
+let mascota4 = {nombre:'koki', edad:15};
+let mascota5 = {nombre:'pocho', edad:1};
+let mascota6 = {nombre:'pichi', edad:7};
+
+
+let mascotas =[mascota1, mascota2, mascota3];
+
+
+let mascotasGrandes = mascotas.filter(
+    (mascota)=> mascota.edad > 5 );
+
+
+
+// SPLICE  
+
+
+let resultado = mascotas.slice(2);
+
+console.log(resultado); 
+
+
+
+
+
 
 
