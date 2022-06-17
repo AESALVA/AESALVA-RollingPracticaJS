@@ -264,7 +264,7 @@ else alert("no ingreso una operacion permitida");
 
 // CLASE 16/06/22
 
-// fubciones de arrays
+// fuNciones de arrays
 /*
 let lista1 = ['1','2','3','4'];
 */
@@ -281,19 +281,19 @@ console.log(nuevoarray);
 */
 // FILTER  armar un nuevo array con los elementos que coincidan
 
-let mascota1 = {id:1, nombre:'michi', edad:9};
-let mascota2 = {id:2, nombre:'rata', edad:1};
-let mascota3 = {id:3, nombre:'Siro', edad:12};
-let mascota4 = {id:4, nombre:'koki', edad:15};
-let mascota5 = {id:5, nombre:'pocho', edad:1};
-let mascota6 = {id:6, nombre:'pichi', edad:7};
+// let mascota1 = {id:1, nombre:'michi', edad:9};
+// let mascota2 = {id:2, nombre:'rata', edad:1};
+// let mascota3 = {id:3, nombre:'Siro', edad:12};
+// let mascota4 = {id:4, nombre:'koki', edad:15};
+// let mascota5 = {id:5, nombre:'pocho', edad:1};
+// let mascota6 = {id:6, nombre:'pichi', edad:7};
 
 
-let mascotas =[mascota1, mascota2, mascota3, mascota4, mascota5, mascota6];
+// let mascotas =[mascota1, mascota2, mascota3, mascota4, mascota5, mascota6];
 
 
- let mascotasGrandes = mascotas.filter(
-     (mascota)=> mascota.edad > 5 );
+//  let mascotasGrandes = mascotas.filter(
+//      (mascota)=> mascota.edad > 5 );
 
 /*
 
@@ -316,18 +316,86 @@ console.log(mascotas);
 
 // FIND
 
-let mascota = mascotas.find((mascotas)=>mascotas.edad > 5);
+
+// let mascota = mascotas.find((mascotas)=>mascotas.edad > 5);
 
 
-let mascotanro2 = mascotas.findIndex((mascotas)=>mascotas.nombre == 'koki');   // FINDE INDICE
-console.log(mascotanro2);
+// let mascotanro2 = mascotas.findIndex((mascotas)=>mascotas.nombre == 'koki');   // FINDE INDICE
+// console.log(mascotanro2);
 
-console.clear();
+// console.clear();
 
 
-mascotas.reverse();
-console.log(mascotas);
+// mascotas.reverse();
+// console.log(mascotas);
 
+
+
+// TAREAS //
+
+//Sumatoria de numeros :
+// Crear una funcion que tome como parametro un numero y devuelva por consola como resultado la suma de todos los numeros hasta el, por ej:
+// sumarotia(5) devolveria  13
+// por que  1 + 2 + 3 + 4 + 5 = 13;
+// sumarotia(10) devolveria  55
+// por que  1 + 2 + 3 + ... + 10 = 55
+/*--------------------------------------------------------------*/
+
+
+
+// function sumatoria(num1, num2, num3, num4, num5) {
+//     return (num1 + num2 + num3 + num4 + num5 )
+// };
+
+
+// console.log(sumatoria(1, 2, 3, 4, 5));
+// console.clear();
+
+
+// function sumatoria(num1, num2, num3, num4, num5, num6, num7, num8, num9, num10){
+//     return (num1 + num2 + num3  + num4 + num5 + num6 + num7 + num8 + num9 + num10)
+// }
+
+// console.log(sumatoria(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+
+
+
+// sumatoria(5);
+// sumatoria(10);
+/*--------------------------------------------------------------*/
+//Tabla de multiplicar
+// Crear una funcion que devuelva un array nuevo en donde esten los multiplos del 1 al 10 de el numero pasado y mostrarlo por consola, por ej:
+// tablaDe(5) devolveria [5,10,15,20,25,30,35,40,45,50]
+// tablaDe(2) devolveria [2,4,6,8,10,12,14,16,18,20]
+/*--------------------------------------------------------------*/
+
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let newnumbers = numeros.map((numero)=>{return numero*5});
+
+console.log(newnumbers);
+
+
+let nuevosNumeros = numeros.map((numero)=>{return numero*2});
+
+console.log(nuevosNumeros);
+
+
+
+
+
+// tablaDe(5);
+// tablaDe(2);
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------*/
 
 
 
