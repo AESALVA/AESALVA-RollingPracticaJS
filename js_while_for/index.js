@@ -281,28 +281,52 @@ console.log(nuevoarray);
 */
 // FILTER  armar un nuevo array con los elementos que coincidan
 
-let mascota1 = {nombre:'michi', edad:9};
-let mascota2 = {nombre:'rata', edad:1};
-let mascota3 = {nombre:'Siro', edad:12};
-let mascota4 = {nombre:'koki', edad:15};
-let mascota5 = {nombre:'pocho', edad:1};
-let mascota6 = {nombre:'pichi', edad:7};
+let mascota1 = {id:1, nombre:'michi', edad:9};
+let mascota2 = {id:2, nombre:'rata', edad:1};
+let mascota3 = {id:3, nombre:'Siro', edad:12};
+let mascota4 = {id:4, nombre:'koki', edad:15};
+let mascota5 = {id:5, nombre:'pocho', edad:1};
+let mascota6 = {id:6, nombre:'pichi', edad:7};
 
 
-let mascotas =[mascota1, mascota2, mascota3];
+let mascotas =[mascota1, mascota2, mascota3, mascota4, mascota5, mascota6];
 
 
-let mascotasGrandes = mascotas.filter(
-    (mascota)=> mascota.edad > 5 );
+ let mascotasGrandes = mascotas.filter(
+     (mascota)=> mascota.edad > 5 );
+
+/*
+
+// SLICE  
 
 
+let resultadoSlice = mascotas.slice(2);
 
-// SPLICE  
+console.log(resultadoSlice); 
+console.log(mascotas);
+console.clear();
+
+// SPLICE
+
+let resultadoSplice = mascotas.splice(2,1);
+
+console.log(resultadoSplice);
+console.log(mascotas);
+*/
+
+// FIND
+
+let mascota = mascotas.find((mascotas)=>mascotas.edad > 5);
 
 
-let resultado = mascotas.slice(2);
+let mascotanro2 = mascotas.findIndex((mascotas)=>mascotas.nombre == 'koki');   // FINDE INDICE
+console.log(mascotanro2);
 
-console.log(resultado); 
+console.clear();
+
+
+mascotas.reverse();
+console.log(mascotas);
 
 
 
