@@ -265,20 +265,23 @@ else alert("no ingreso una operacion permitida");
 // CLASE 16/06/22
 
 // fuNciones de arrays
-/*
-let lista1 = ['1','2','3','4'];
-*/
+
+// let lista1 = ['1','2','3','4'];
+
 
 // foreach  |  POR cada elemento
-/*
-lista1.forEach((lista) => {console.log(lista)});    // array en plural , elemento singular
+
+// lista1.forEach((lista) => {console.log(lista)});    // array en plural , elemento singular
 
 // map | CON cada elemento , todas las veces va a devolver algo
 
-let nuevoarray = lista1.map((lista)=>{return lista + ' del map'});
+// let nuevoarray = lista1.map((lista)=>{return lista + ' del map'});
 
-console.log(nuevoarray);
-*/
+// console.log(nuevoarray);
+
+
+
+
 // FILTER  armar un nuevo array con los elementos que coincidan
 
 // let mascota1 = {id:1, nombre:'michi', edad:9};
@@ -328,6 +331,10 @@ console.log(mascotas);
 
 // mascotas.reverse();
 // console.log(mascotas);
+
+
+
+
 
 
 
@@ -402,15 +409,15 @@ console.log(mascotas);
 
 //Funciones con Strings
 
-let alfabeto = "  A b C d E f G h I j K l l M n O p Q r S t U v W x Y z  ";
+// let alfabeto = "  A b C d E f G h I j K l l M n O p Q r S t U v W x Y z  ";
 
-// podemos tratar un string en ciertas maneras como un array de caracteres
+// // podemos tratar un string en ciertas maneras como un array de caracteres
 
-const resultados = {};
+// const resultados = {};
 
-resultados.conteoLetras = alfabeto.length;
-resultados.letraA = alfabeto[2];
-resultados.letraZ = alfabeto[28];
+// resultados.conteoLetras = alfabeto.length;
+// resultados.letraA = alfabeto[2];
+// resultados.letraZ = alfabeto[28];
 
 //pero no podemos hacer un recorrido por ellas con foreach
 //alfabeto.forEach((letra) => console.log(letra));
@@ -447,11 +454,12 @@ resultados.letraZ = alfabeto[28];
 // Trim re,corta los espacios en blanco
 //resultados.trimeado = alfabeto.trim();
 
-console.log('alfabeto:' + alfabeto);
+// console.log('alfabeto:' + alfabeto);
 
-for (const llave in resultados) {
-    console.log(`${llave}: ${resultados[llave]} `);
-}
+// for (const llave in resultados) {
+//     console.log(`${llave}: ${resultados[llave]} `);
+// }
+
 
 
 
