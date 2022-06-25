@@ -471,3 +471,5 @@ let newarray = array.filter((arr)=>arr=='true');
 console.log(newarray.length);
 
 
+
+
