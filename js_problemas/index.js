@@ -35,15 +35,4 @@
 // form.append(button);
 // main.append(form);
 
-const arrs = [true, false, true, false, true, false];
-
-let newarrrs = arrs.map((arr)=>{});
-
-console.log(newarrrs);
-
-
-
-
-
- 
 
