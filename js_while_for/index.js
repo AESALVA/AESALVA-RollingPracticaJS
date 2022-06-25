@@ -461,7 +461,14 @@ console.log(mascotas);
 // }
 
 
+// CLASE DE CONSULTA 25/06/22
 
+
+const array = ['true','false','true','false','true','true','false','true','false','true'];
+
+let newarray = array.filter((arr)=>arr=='true');
+
+console.log(newarray.length);
 
 
 
