@@ -1,0 +1,19 @@
+.mainCreadoStyle{
+    border: 2px solid #ccc;
+    width: 500px;
+    height: 500px;
+}
+
+.divNuevoStyle{
+    border:1px solid #ccc;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+
+}
+
+.error{
+    outline: red solid 2px;
+
+}
+
