@@ -1,0 +1,27 @@
+@import url(/ppt/css/reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.conteiner{
+    width: 100%;
+}
+
+h1{
+    padding: 2rem;
+}
+h2{
+    padding: 2rem;
+}
+
+.container_group {
+   display: flex;
+}
+
+button{
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+    border-radius: 20px;
+}
