@@ -43,6 +43,7 @@ h2{
    display: flex;
 }
 
+
 button{
     width: 5rem;
     height: 5rem;
@@ -51,6 +52,10 @@ button{
     background-color:#0f3e96;
     border-color: #1561be;
     margin: 1rem    ;
+}
+
+p{
+    font-size: 2rem;
 }
 
 #tablero{
