@@ -1,7 +1,7 @@
 @import url(/ppt/css/reset.css);
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&family=Josefin+Sans&display=swap');
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Edu NSW ACT Foundation', cursive;
 }
 
 body{
@@ -18,7 +18,7 @@ body{
     border: double 2px transparent;
     border-radius: 10px;
     background-image:
-        linear-gradient(#182636, #060f1a),
+        linear-gradient(#03070c, #051d3a),
         linear-gradient(to right, #a07f9b, #281dc4);
         background-origin: border-box;
         background-clip: content-box, border-box;
@@ -27,9 +27,16 @@ body{
 
 h1{
     padding: 2rem;
+    font-weight: 700;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 2rem;
+    background: linear-gradient(rgb(39, 23, 250),rgb(158, 143, 187));
+    -webkit-background-clip: text;
+    color: transparent;  
 }
 h2{
     padding: 2rem;
+    font-size: 1.2rem;
 }
 
 .container_group {
@@ -45,6 +52,12 @@ button{
     border-color: #1561be;
     margin: 1rem    ;
 }
+
+#tablero{
+    font-size: 2.2rem;
+
+}
+
 
 #elecciones{
     display: flex;

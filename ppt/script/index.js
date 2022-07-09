@@ -41,14 +41,14 @@ function juego(opcionUsuario){
     const resultado = calcResultado(opcionUsuario, maquina);
 
     if (resultado === empate) {
-        tablero.innerHTML = "EMPATE";
+        tablero.innerHTML = "¡¡ EMPATE !!";
     }
     else if(resultado === ganador){
-        tablero.innerHTML = "GANASTE";
+        tablero.innerHTML = "¡¡ GANASTE !!";
         
     }
     else if(resultado === perdedor){
-        tablero.innerHTML = "PERDISTE";
+        tablero.innerHTML = "¡¡ PERDISTE !!";
     }
 
 }
