@@ -240,7 +240,6 @@ const catalogue = document.getElementById("catalogue");
 // Inicializando el carrito vacio
 let cartContent = [];
 
-
 // Creo una funcion para mostrar las cards
 function createCards(data, id, needsButton) {
   data.forEach((d) => {
@@ -249,11 +248,10 @@ function createCards(data, id, needsButton) {
     card.className = `col border border-2 border-${
       id === catalogue ? "primary" : "secondary"
     } p-2 bg-light`;
-   
     
+
     let cardContent = document.createElement("div");
     cardContent.className = "card h-100";
-
 
     let cardBody = document.createElement("div");
     cardBody.className = "card-body";
@@ -270,9 +268,8 @@ function createCards(data, id, needsButton) {
     cardButton.className = "btn btn-primary";
     cardButton.innerHTML = "Buy";
     cardButton.onclick = () => {
-      cartContent.push(d);  
-      createCardsCart(d);
-    
+      cartContent.push(d);
+        createCardsCart(d);
     };
 
     cardBody.appendChild(cardTitle);
@@ -285,39 +282,46 @@ function createCards(data, id, needsButton) {
 
     id.appendChild(card);
   });
+  
+  
+
 }
 
 createCards(MOCKED_DATA, catalogue, true);
 
+function createCardsCart(d) {
+  // Creación con JS de card de bootstrap en el cartContent
 
-function createCardsCart(d){
-    // Creación con JS de card de bootstrap en el cartContent
-    let card = document.createElement("div");
-    card.className = `col border border-2 border-secondary p-2 bg-light`;
+  let card = document.createElement("div");
+  card.className = `col border border-2 border-secondary p-2 bg-light`;
+
+  let cardContent = document.createElement("div");
+  cardContent.className = "card h-100";
+
+  let cardBody = document.createElement("div");
+  cardBody.className = "card-body";
+
+  let cardTitle = document.createElement("h5");
+  cardTitle.className = "card-title";  
+  cardTitle.innerHTML = d.name;
+
+  let cardText = document.createElement("p");
+  cardText.className = "card-text bold-test";
+  cardText.innerHTML = `Price: ${d.cost_in_credits}`;
+
+  let units = document.createElement("p");
+  units.className = "card-units";
+  units.innerHTML = `cantidad:`;
+  cardText.append(units);
+
+  cardBody.appendChild(cardTitle);
+  cardBody.appendChild(cardText);
+  cardContent.appendChild(cardBody);
+  card.appendChild(cardContent);
+
+  cart.appendChild(card);
   
-    
-    let cardContent = document.createElement("div");
-    cardContent.className = "card h-100";
-
-
-    let cardBody = document.createElement("div");
-    cardBody.className = "card-body";
-
-    let cardTitle = document.createElement("h5");
-    cardTitle.className = "card-title";
-    cardTitle.innerHTML = d.name;
-
-    let cardText = document.createElement("p");
-    cardText.className = "card-text bold-test";
-    cardText.innerHTML = `Price: ${d.cost_in_credits}`;
-
-
-    cardBody.appendChild(cardTitle);
-    cardBody.appendChild(cardText);
-    cardContent.appendChild(cardBody);
-    card.appendChild(cardContent);
-
-    cart.appendChild(card);
-
-
+  
 }
+
+
