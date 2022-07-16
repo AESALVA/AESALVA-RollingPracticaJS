@@ -249,9 +249,11 @@ function createCards(data, id, needsButton) {
     card.className = `col border border-2 border-${
       id === catalogue ? "primary" : "secondary"
     } p-2 bg-light`;
+   
     
     let cardContent = document.createElement("div");
     cardContent.className = "card h-100";
+
 
     let cardBody = document.createElement("div");
     cardBody.className = "card-body";
@@ -268,9 +270,9 @@ function createCards(data, id, needsButton) {
     cardButton.className = "btn btn-primary";
     cardButton.innerHTML = "Buy";
     cardButton.onclick = () => {
-      cartContent.push(d);
-      createCards(cartContent, cart, false);
-     
+      cartContent.push(d);  
+      createCardsCart(d);
+    
     };
 
     cardBody.appendChild(cardTitle);
@@ -286,3 +288,36 @@ function createCards(data, id, needsButton) {
 }
 
 createCards(MOCKED_DATA, catalogue, true);
+
+
+function createCardsCart(d){
+    // Creación con JS de card de bootstrap en el cartContent
+    let card = document.createElement("div");
+    card.className = `col border border-2 border-secondary p-2 bg-light`;
+  
+    
+    let cardContent = document.createElement("div");
+    cardContent.className = "card h-100";
+
+
+    let cardBody = document.createElement("div");
+    cardBody.className = "card-body";
+
+    let cardTitle = document.createElement("h5");
+    cardTitle.className = "card-title";
+    cardTitle.innerHTML = d.name;
+
+    let cardText = document.createElement("p");
+    cardText.className = "card-text bold-test";
+    cardText.innerHTML = `Price: ${d.cost_in_credits}`;
+
+
+    cardBody.appendChild(cardTitle);
+    cardBody.appendChild(cardText);
+    cardContent.appendChild(cardBody);
+    card.appendChild(cardContent);
+
+    cart.appendChild(card);
+
+
+}
