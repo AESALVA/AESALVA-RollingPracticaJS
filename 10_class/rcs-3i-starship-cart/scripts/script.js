@@ -314,13 +314,20 @@ function createCardsCart(d) {
   units.innerHTML = `cantidad:`;
   cardText.append(units);
 
+  let deletebutton = document.createElement("button");
+  deletebutton.className = "delete-button btn btn-danger";
+  deletebutton.innerHTML = "Delete";
+  cardText.append(deletebutton);
+  deletebutton.onclick = function() {
+    card.remove();}
+
+
   cardBody.appendChild(cardTitle);
   cardBody.appendChild(cardText);
   cardContent.appendChild(cardBody);
   card.appendChild(cardContent);
 
   cart.appendChild(card);
-  
   
 }
 
