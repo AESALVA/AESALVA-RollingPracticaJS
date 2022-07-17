@@ -248,7 +248,6 @@ function createCards(data, id, needsButton) {
     card.className = `col border border-2 border-${
       id === catalogue ? "primary" : "secondary"
     } p-2 bg-light`;
-    
 
     let cardContent = document.createElement("div");
     cardContent.className = "card h-100";
@@ -269,7 +268,7 @@ function createCards(data, id, needsButton) {
     cardButton.innerHTML = "Buy";
     cardButton.onclick = () => {
       cartContent.push(d);
-        createCardsCart(d);
+      createCardsCart(d);
     };
 
     cardBody.appendChild(cardTitle);
@@ -282,9 +281,6 @@ function createCards(data, id, needsButton) {
 
     id.appendChild(card);
   });
-  
-  
-
 }
 
 createCards(MOCKED_DATA, catalogue, true);
@@ -302,33 +298,38 @@ function createCardsCart(d) {
   cardBody.className = "card-body";
 
   let cardTitle = document.createElement("h5");
-  cardTitle.className = "card-title";  
+  cardTitle.className = "card-title";
   cardTitle.innerHTML = d.name;
 
   let cardText = document.createElement("p");
   cardText.className = "card-text bold-test";
   cardText.innerHTML = `Price: ${d.cost_in_credits}`;
 
+  let cantities = document.createElement("p");
+  cantities.className = "card-cantities d-flex";
+  cantities.innerHTML = "Cantidad: ";
+  cardText.append(cantities);
+
   let units = document.createElement("p");
   units.className = "card-units";
-  units.innerHTML = `cantidad:`;
+  units.innerHTML = 0;
   cardText.append(units);
 
   let deletebutton = document.createElement("button");
   deletebutton.className = "delete-button btn btn-danger";
   deletebutton.innerHTML = "Delete";
   cardText.append(deletebutton);
-  deletebutton.onclick = function() {
-    card.remove();}
-
+  deletebutton.onclick = function () {
+    card.remove();
+  };
 
   cardBody.appendChild(cardTitle);
   cardBody.appendChild(cardText);
   cardContent.appendChild(cardBody);
   card.appendChild(cardContent);
-
   cart.appendChild(card);
-  
+
+  for (let i = 0; i < cartContent.length; i++) {
+    if (cartContent[i].name === d.name) units.innerHTML++;
+     }
 }
-
-
