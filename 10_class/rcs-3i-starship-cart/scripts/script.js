@@ -236,9 +236,15 @@ const MOCKED_DATA = [
 // Tomo el control de los divs con JS
 const cart = document.getElementById("cart");
 const catalogue = document.getElementById("catalogue");
-
+cart.innerHTML = [];
 // Inicializando el carrito vacio
 let cartContent = [];
+
+
+
+
+
+
 
 // Creo una funcion para mostrar las cards
 function createCards(data, id, needsButton) {
@@ -263,12 +269,17 @@ function createCards(data, id, needsButton) {
     cardText.className = "card-text bold-test";
     cardText.innerHTML = `Price: ${d.cost_in_credits}`;
 
+
     let cardButton = document.createElement("button");
     cardButton.className = "btn btn-primary";
     cardButton.innerHTML = "Buy";
     cardButton.onclick = () => {
+      
       cartContent.push(d);
       createCardsCart(d);
+     
+
+ 
     };
 
     cardBody.appendChild(cardTitle);
@@ -281,12 +292,14 @@ function createCards(data, id, needsButton) {
 
     id.appendChild(card);
   });
+
 }
 
 createCards(MOCKED_DATA, catalogue, true);
 
 function createCardsCart(d) {
   // Creación con JS de card de bootstrap en el cartContent
+  
 
   let card = document.createElement("div");
   card.className = `col border border-2 border-secondary p-2 bg-light`;
@@ -327,9 +340,20 @@ function createCardsCart(d) {
   cardBody.appendChild(cardText);
   cardContent.appendChild(cardBody);
   card.appendChild(cardContent);
-  cart.appendChild(card);
+
+ 
 
   for (let i = 0; i < cartContent.length; i++) {
-    if (cartContent[i].name === d.name) units.innerHTML++;
-     }
+    if (cartContent[i].name === d.name) 
+    units.innerHTML++;
 }
+
+let cartContentTwo = [...new Set(cartContent)];
+
+
+
+
+
+
+}
+
