@@ -1,11 +1,15 @@
 @import url(/ppt/css/reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&family=Josefin+Sans&display=swap');
-body{
-    font-family: 'Edu NSW ACT Foundation', cursive;
-}
+
+
 
 body{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    color:white;
     width: 100vw;
+  
+
+
 }
 
 .conteiner{
@@ -14,7 +18,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50rem;
+    width: 80rem;
     border: double 2px transparent;
     border-radius: 10px;
     background-image:
@@ -37,6 +41,7 @@ h1{
 h2{
     padding: 2rem;
     font-size: 1.2rem;
+    height: 3rem;
 }
 
 .container_group {
@@ -63,6 +68,7 @@ p{
     background: linear-gradient(rgb(39, 23, 250),rgb(158, 143, 187));
     -webkit-background-clip: text;
     color: transparent;  
+    text-align: center;
 }
 
 
@@ -72,4 +78,42 @@ p{
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    
+}
+.container-boards{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    top: 5rem;
+    left:25rem;
+    text-align: center;
+
+    
+    
+}
+.board-human, .board-machine{
+    border: double 2px transparent;
+    border-radius: 10px;
+    background-image:
+        linear-gradient(#03070c, #051d3a),
+        linear-gradient(to right, #a07f9b, #281dc4);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        width: 15rem;
+        height: 20rem;
+        line-height: 1.8;
+        
+     
+}
+.board-human p,    .board-machine p{
+    background: linear-gradient(rgb(39, 23, 250),rgb(158, 143, 187));
+    -webkit-background-clip: text;
+    color: transparent;  
+}
+.board-machine{
+    position: fixed;
+    right:25rem;
+    
 }

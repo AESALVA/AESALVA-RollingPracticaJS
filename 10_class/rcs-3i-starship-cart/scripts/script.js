@@ -278,7 +278,7 @@ function createCards(data, id, needsButton) {
       cartContent.push(d);
       createCardsCart(d);
      
-
+      
  
     };
 
@@ -349,7 +349,6 @@ function createCardsCart(d) {
 }
 
 let cartContentTwo = [...new Set(cartContent)];
-
 
 
 
