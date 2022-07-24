@@ -73,10 +73,11 @@ p{
 
 
 #elecciones{
+    width: 80rem;
     display: flex;
     flex-direction:row;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     padding: 2rem;
     
 }
@@ -86,7 +87,7 @@ p{
     flex-direction: row;
     justify-content: space-around;
     position: fixed;
-    top: 5rem;
+    top: 7rem;
     left:25rem;
     text-align: center;
 
@@ -111,9 +112,19 @@ p{
     background: linear-gradient(rgb(39, 23, 250),rgb(158, 143, 187));
     -webkit-background-clip: text;
     color: transparent;  
+    padding-top: 1rem;
 }
 .board-machine{
     position: fixed;
     right:25rem;
     
 }
+
+img{
+    width: 13rem;
+    padding-top: 1rem;
+    border-radius: 10px;
+    
+}
+
+        

@@ -28,8 +28,10 @@ tijerasBtn.addEventListener("click", () => {
   tableroUsuario.innerHTML = tijerasBtn.innerHTML;
 });
 
-let resultadoHuman = 1;
-let resultadoMachine = 1;
+let resultadoHuman = 0;
+let resultadoMachine = 0;
+boardHuman.innerHTML = resultadoHuman;
+boardMachine.innerHTML = resultadoMachine;
 
 function juego(opcionUsuario) {
   const maquina = Math.floor(Math.random() * 3);
@@ -47,15 +49,20 @@ function juego(opcionUsuario) {
 
   if (resultado === empate) {
     tablero.innerHTML = "¡¡ EMPATE !!";
+    
+
   } else if (resultado === ganador) {
     tablero.innerHTML = "¡¡ GANASTE !!";
 
+    resultadoHuman++;
     boardHuman.innerHTML = resultadoHuman;
-    resultadoHuman += 1;
+    
+    
   } else if (resultado === perdedor) {
     tablero.innerHTML = "¡¡ PERDISTE !!";
+    resultadoMachine++;
     boardMachine.innerHTML = resultadoMachine;
-    resultadoMachine += 1;
+    
   }
 }
 
