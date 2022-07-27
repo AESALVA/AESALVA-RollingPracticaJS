@@ -250,6 +250,7 @@ let cartContent = [];
 function createCards(data, id, needsButton) {
 
   data.forEach((d) => {
+    
     // Creación con JS de card de bootstrap
     let card = document.createElement("div");
     card.className = `col border border-2 border-${
@@ -275,10 +276,13 @@ function createCards(data, id, needsButton) {
     cardButton.className = "btn btn-primary";
     cardButton.innerHTML = "Buy";
     cardButton.onclick = () => {
+      const exist = cartContent.some(p=> p.name === d.name);
+      if (!exist) {
+        cartContent.push(d);
+      }else console.log("click");
       
-      cartContent.push(d);
-      createCardsCart(d);
-     
+      createCardsCart();
+      
     
  
     };
@@ -293,17 +297,21 @@ function createCards(data, id, needsButton) {
 
     id.appendChild(card);
   });
-
+  
 }
 
 createCards(MOCKED_DATA, catalogue, true);
 
-function createCardsCart(d) {
+
+
+function createCardsCart() {
   // Creación con JS de card de bootstrap en el cartContent
   cart.innerHTML = "";
+  cartContent.forEach((d)=> {
 
   let card = document.createElement("div");
   card.className = `col border border-2 border-secondary p-2 bg-light`;
+  card.innerHTML;
 
   let cardContent = document.createElement("div");
   cardContent.className = "card h-100";
@@ -333,11 +341,8 @@ function createCardsCart(d) {
   deletebutton.className = "delete-button btn btn-danger";
   deletebutton.innerHTML = "Delete";
   cardText.append(deletebutton);
-  deletebutton.onclick = function () {
-    card.remove();
-    
-  };
-
+  deletebutton.addEventListener("click", ()=>del(d));
+  
   cardBody.appendChild(cardTitle);
   cardBody.appendChild(cardText);
   cardContent.appendChild(cardBody);
@@ -346,18 +351,22 @@ function createCardsCart(d) {
   cart.appendChild(card);
  
   
-  
+
 
  
 
   for (let i = 0; i < cartContent.length; i++) {
     if (cartContent[i].name === d.name) 
     units.innerHTML++;
+    
+}
+  })
+
+
 }
 
 
 
-
-console.log(cartContent);
-
+function del() {
+  cartContent.splice(cartContent.indexOf(d),1);
 }
