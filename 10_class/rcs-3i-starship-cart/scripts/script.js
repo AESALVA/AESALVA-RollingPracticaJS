@@ -265,7 +265,7 @@ function createCards(data, id, needsButton) {
 
     let cardText = document.createElement("p");
     cardText.className = "card-text bold-test";
-    cardText.innerHTML = `Price: ${d.cost_in_credits}`;
+    cardText.innerHTML = `Price: $ ${d.cost_in_credits}`;
 
     let cardButton = document.createElement("button");
     cardButton.className = "btn btn-outline-primary";
