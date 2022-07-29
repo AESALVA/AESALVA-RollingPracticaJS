@@ -276,13 +276,16 @@ function createCards(data, id, needsButton) {
     cardButton.className = "btn btn-primary";
     cardButton.innerHTML = "Buy";
     cardButton.onclick = () => {
+     
       const exist = cartContent.some(p=> p.name === d.name);
       if (!exist) {
+        d.q = 1;
         cartContent.push(d);
-      }else console.log("click");
-      
+      } else {const index = cartContent.indexOf(d);
+      cartContent[index].q++;
+    }
+
       createCardsCart();
-      
     
  
     };
@@ -334,8 +337,8 @@ function createCardsCart() {
 
   let units = document.createElement("p");
   units.className = "card-units";
-  units.innerHTML = 0;
-  cardText.append(units);
+  units.innerHTML = `${d.q}`;
+  cardText.appendChild(units);
 
   let deletebutton = document.createElement("button");
   deletebutton.className = "delete-button btn btn-danger";
@@ -353,13 +356,7 @@ function createCardsCart() {
   
 
 
- 
 
-  for (let i = 0; i < cartContent.length; i++) {
-    if (cartContent[i].name === d.name) 
-    units.innerHTML++;
-    
-}
   })
 
 
@@ -367,6 +364,13 @@ function createCardsCart() {
 
 
 
-function del() {
-  cartContent.splice(cartContent.indexOf(d),1);
+function del(d) {
+const index = cartContent.indexOf(d);
+if (cartContent[index].q === 1) {
+  cartContent.splice(index, 1);
+}else{cartContent[index].q--;}
+
+
+
+createCardsCart();
 }
