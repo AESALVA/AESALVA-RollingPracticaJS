@@ -4,7 +4,7 @@ const MOCKED_DATA = [
     name: "CR90 corvette",
     model: "CR90 corvette",
     manufacturer: "Corellian Engineering Corporation",
-    cost_in_credits: "3500000",
+    cost_in_credits: "3500",
     length: "150",
     max_atmosphering_speed: "950",
     crew: "30-165",
@@ -28,7 +28,7 @@ const MOCKED_DATA = [
     name: "Star Destroyer",
     model: "Imperial I-class Star Destroyer",
     manufacturer: "Kuat Drive Yards",
-    cost_in_credits: "150000000",
+    cost_in_credits: "15000",
     length: "1,600",
     max_atmosphering_speed: "975",
     crew: "47,060",
@@ -52,7 +52,7 @@ const MOCKED_DATA = [
     name: "Sentinel-class landing craft",
     model: "Sentinel-class landing craft",
     manufacturer: "Sienar Fleet Systems, Cyngus Spaceworks",
-    cost_in_credits: "240000",
+    cost_in_credits: "2400",
     length: "38",
     max_atmosphering_speed: "1000",
     crew: "5",
@@ -73,7 +73,7 @@ const MOCKED_DATA = [
     model: "DS-1 Orbital Battle Station",
     manufacturer:
       "Imperial Department of Military Research, Sienar Fleet Systems",
-    cost_in_credits: "1000000000000",
+    cost_in_credits: "10000",
     length: "120000",
     max_atmosphering_speed: "n/a",
     crew: "342,953",
@@ -93,7 +93,7 @@ const MOCKED_DATA = [
     name: "Millennium Falcon",
     model: "YT-1300 light freighter",
     manufacturer: "Corellian Engineering Corporation",
-    cost_in_credits: "100000",
+    cost_in_credits: "1000",
     length: "34.37",
     max_atmosphering_speed: "1050",
     crew: "4",
@@ -122,7 +122,7 @@ const MOCKED_DATA = [
     name: "Y-wing",
     model: "BTL Y-wing",
     manufacturer: "Koensayr Manufacturing",
-    cost_in_credits: "134999",
+    cost_in_credits: "1350",
     length: "14",
     max_atmosphering_speed: "1000km",
     crew: "2",
@@ -146,7 +146,7 @@ const MOCKED_DATA = [
     name: "X-wing",
     model: "T-65 X-wing",
     manufacturer: "Incom Corporation",
-    cost_in_credits: "149999",
+    cost_in_credits: "1499",
     length: "12.5",
     max_atmosphering_speed: "1050",
     crew: "1",
@@ -175,7 +175,7 @@ const MOCKED_DATA = [
     name: "TIE Advanced x1",
     model: "Twin Ion Engine Advanced x1",
     manufacturer: "Sienar Fleet Systems",
-    cost_in_credits: "unknown",
+    cost_in_credits: "10000",
     length: "9.2",
     max_atmosphering_speed: "1200",
     crew: "1",
@@ -195,7 +195,7 @@ const MOCKED_DATA = [
     name: "Executor",
     model: "Executor-class star dreadnought",
     manufacturer: "Kuat Drive Yards, Fondor Shipyards",
-    cost_in_credits: "1143350000",
+    cost_in_credits: "11435",
     length: "19000",
     max_atmosphering_speed: "n/a",
     crew: "279,144",
@@ -215,7 +215,7 @@ const MOCKED_DATA = [
     name: "Rebel transport",
     model: "GR-75 medium transport",
     manufacturer: "Gallofree Yards, Inc.",
-    cost_in_credits: "unknown",
+    cost_in_credits: "12000",
     length: "90",
     max_atmosphering_speed: "650",
     crew: "6",
@@ -236,21 +236,17 @@ const MOCKED_DATA = [
 // Tomo el control de los divs con JS
 const cart = document.getElementById("cart");
 const catalogue = document.getElementById("catalogue");
-
+const total = document.getElementById('total');
+const btnClear = document
+  .getElementById('btn-clear')
+  .addEventListener('click', () => clearCart());
 // Inicializando el carrito vacio
 
 let cartContent = [];
 
-
-
-
-
-
 // Creo una funcion para mostrar las cards
 function createCards(data, id, needsButton) {
-
   data.forEach((d) => {
-    
     // Creación con JS de card de bootstrap
     let card = document.createElement("div");
     card.className = `col border border-2 border-${
@@ -271,23 +267,20 @@ function createCards(data, id, needsButton) {
     cardText.className = "card-text bold-test";
     cardText.innerHTML = `Price: ${d.cost_in_credits}`;
 
-
     let cardButton = document.createElement("button");
-    cardButton.className = "btn btn-primary";
+    cardButton.className = "btn btn-outline-primary";
     cardButton.innerHTML = "Buy";
     cardButton.onclick = () => {
-     
-      const exist = cartContent.some(p=> p.name === d.name);
+      const exist = cartContent.some((p) => p.name === d.name);
       if (!exist) {
         d.q = 1;
         cartContent.push(d);
-      } else {const index = cartContent.indexOf(d);
-      cartContent[index].q++;
-    }
+      } else {
+        const index = cartContent.indexOf(d);
+        cartContent[index].q++;
+      }
 
       createCardsCart();
-    
- 
     };
 
     cardBody.appendChild(cardTitle);
@@ -300,77 +293,82 @@ function createCards(data, id, needsButton) {
 
     id.appendChild(card);
   });
-  
 }
 
 createCards(MOCKED_DATA, catalogue, true);
 
-
-
 function createCardsCart() {
   // Creación con JS de card de bootstrap en el cartContent
   cart.innerHTML = "";
-  cartContent.forEach((d)=> {
+  total.innerText = '';
+  let cartTotal = 0;
+  cartContent.forEach((d) => {
+    let card = document.createElement("div");
+    card.className = `col border border-2 border-secondary p-2 bg-light`;
+    card.innerHTML;
 
-  let card = document.createElement("div");
-  card.className = `col border border-2 border-secondary p-2 bg-light`;
-  card.innerHTML;
+    let cardContent = document.createElement("div");
+    cardContent.className = "card h-100";
 
-  let cardContent = document.createElement("div");
-  cardContent.className = "card h-100";
+    let cardBody = document.createElement("div");
+    cardBody.className = "card-body";
 
-  let cardBody = document.createElement("div");
-  cardBody.className = "card-body";
+    let cardTitle = document.createElement("h5");
+    cardTitle.className = "card-title";
+    cardTitle.innerHTML = d.name;
 
-  let cardTitle = document.createElement("h5");
-  cardTitle.className = "card-title";
-  cardTitle.innerHTML = d.name;
+    let cardText = document.createElement("p");
+    cardText.className = "card-text bold-test";
+    cardText.innerHTML = `Price: $ ${d.cost_in_credits}`;
 
-  let cardText = document.createElement("p");
-  cardText.className = "card-text bold-test";
-  cardText.innerHTML = `Price: ${d.cost_in_credits}`;
+    let cantities = document.createElement("p");
+    cantities.className = "card-cantities d-flex";
+    cantities.innerHTML = "Cantidad: ";
+    cardText.append(cantities);
 
-  let cantities = document.createElement("p");
-  cantities.className = "card-cantities d-flex";
-  cantities.innerHTML = "Cantidad: ";
-  cardText.append(cantities);
+    let units = document.createElement("p");
+    units.className = "card-units";
+    units.innerHTML = `${d.q}`;
+    cardText.appendChild(units);
 
-  let units = document.createElement("p");
-  units.className = "card-units";
-  units.innerHTML = `${d.q}`;
-  cardText.appendChild(units);
+    let subTotal = document.createElement("p");
+    subTotal.className = "card-subtotal"; 
+    subTotal.innerHTML =  `SubTotal: $ ${d.q * d.cost_in_credits}`;
+    cardText.appendChild(subTotal);
 
-  let deletebutton = document.createElement("button");
-  deletebutton.className = "delete-button btn btn-danger";
-  deletebutton.innerHTML = "Delete";
-  cardText.append(deletebutton);
-  deletebutton.addEventListener("click", ()=>del(d));
-  
-  cardBody.appendChild(cardTitle);
-  cardBody.appendChild(cardText);
-  cardContent.appendChild(cardBody);
-  card.appendChild(cardContent);
- 
-  cart.appendChild(card);
- 
-  
+    let deletebutton = document.createElement("button");
+    deletebutton.className = "delete-button btn btn-outline-danger";
+    deletebutton.innerHTML = "Delete";
+    cardText.append(deletebutton);
+    deletebutton.addEventListener("click", () => del(d));
 
+    cartTotal = cartTotal + d.q * d.cost_in_credits;
+    total.innerText = `(Total $ ${cartTotal})`;
 
+    cardBody.appendChild(cardTitle);
+    cardBody.appendChild(cardText);
+    cardContent.appendChild(cardBody);
+    card.appendChild(cardContent);
 
-  })
+    cart.appendChild(card);
+  });
+}
 
+function del(d) {
+  const index = cartContent.indexOf(d);
+  if (cartContent[index].q === 1) {
+    cartContent.splice(index, 1);
+  } else {
+    cartContent[index].q--;
+  }
 
+  createCardsCart();
 }
 
 
 
-function del(d) {
-const index = cartContent.indexOf(d);
-if (cartContent[index].q === 1) {
-  cartContent.splice(index, 1);
-}else{cartContent[index].q--;}
-
-
-
-createCardsCart();
+function clearCart() {
+  cartContent = [];
+  total.innerText = '';
+  createCardsCart();
 }
