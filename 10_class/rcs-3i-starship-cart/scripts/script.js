@@ -236,10 +236,12 @@ const MOCKED_DATA = [
 // Tomo el control de los divs con JS
 const cart = document.getElementById("cart");
 const catalogue = document.getElementById("catalogue");
-const total = document.getElementById('total');
+const total = document.getElementById("total");
 const btnClear = document
-  .getElementById('btn-clear')
-  .addEventListener('click', () => clearCart());
+  .getElementById("btn-clear")
+  .addEventListener("click", () => clearCart());
+const btnCart = document.getElementById("btn-trigger");
+
 // Inicializando el carrito vacio
 
 let cartContent = [];
@@ -300,7 +302,7 @@ createCards(MOCKED_DATA, catalogue, true);
 function createCardsCart() {
   // Creación con JS de card de bootstrap en el cartContent
   cart.innerHTML = "";
-  total.innerText = '';
+  total.innerText = "";
   let cartTotal = 0;
   cartContent.forEach((d) => {
     let card = document.createElement("div");
@@ -332,8 +334,8 @@ function createCardsCart() {
     cardText.appendChild(units);
 
     let subTotal = document.createElement("p");
-    subTotal.className = "card-subtotal"; 
-    subTotal.innerHTML =  `SubTotal: $ ${d.q * d.cost_in_credits}`;
+    subTotal.className = "card-subtotal";
+    subTotal.innerHTML = `SubTotal: $ ${d.q * d.cost_in_credits}`;
     cardText.appendChild(subTotal);
 
     let deletebutton = document.createElement("button");
@@ -345,6 +347,8 @@ function createCardsCart() {
     cartTotal = cartTotal + d.q * d.cost_in_credits;
     total.innerText = `(Total $ ${cartTotal})`;
 
+    btnCart.className = "btn btn-outline-warning mt-3";
+   
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardText);
     cardContent.appendChild(cardBody);
@@ -361,14 +365,16 @@ function del(d) {
   } else {
     cartContent[index].q--;
   }
-
+  if (cartContent.length === 0) {
+    btnCart.className = "btn btn-outline-primary mt-3";
+  }
   createCardsCart();
+
 }
-
-
 
 function clearCart() {
   cartContent = [];
-  total.innerText = '';
+  total.innerText = "";
   createCardsCart();
+  btnCart.className = "btn btn-outline-primary mt-3";
 }
