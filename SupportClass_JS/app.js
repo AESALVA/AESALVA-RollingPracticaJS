@@ -85,6 +85,5 @@ console.log(resultList);
 
 for (let index = 200; index > 1; index--) {
  if (index %3 === 0) {
-    const newIndex = [index];
-    console.log(newIndex);
+     console.log(index);
     }}
