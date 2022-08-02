@@ -54,3 +54,37 @@ const newResult = newWordTwo.join("");
 console.log(newResult);
 
 
+// EJERCICIO 4: Reverse String
+// Encuentre el minimo y el maximo de la siguiente lista "100, 2000, 3, 50, 6, 7000, 80, 900, 10, 20000, 300, 500, 600"
+
+
+const lista = [100, 2000, 3, 50, 6, 7000, 80, 900, 10, 20000, 300, 500, 600];
+
+console.log(Math.max(...lista));
+
+console.log(Math.min(...lista));
+
+
+
+// EJERCICIO 5: Duplicate Repeats
+// Devuelve los distintos valores únicos de una lista que incluye duplicados 1, 3, 5, 3, 7, 3, 1, 1, 5
+
+
+
+let newList = [1, 3, 5, 3, 7, 3, 1, 1, 5];
+
+const newListTwo = new Set(newList);
+
+let resultList = [...newListTwo];
+
+console.log(resultList);
+
+
+// EJERCICIO 6: Multiple Reverse
+// Escriba un programa que imprima, en orden inverso, cada múltiplo de 3 entre 1 y 200.
+
+for (let index = 200; index > 1; index--) {
+ if (index %3 === 0) {
+    const newIndex = [index];
+    console.log(newIndex);
+    }}
