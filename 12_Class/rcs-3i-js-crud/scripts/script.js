@@ -22,6 +22,7 @@ const newPriceModify = document.getElementById("priceToModify");
 const ModifyButton = document
   .getElementById("modifyButton")
   .addEventListener("click", () => upDateNewResults());
+const modifyMessage = document.getElementById('newModifyModalMessage');
 
 const results = document.getElementById("results");
 
@@ -114,7 +115,7 @@ const upDateNewResults = () => {
   const index = products.findIndex(
     (product) => product.id === newIdModify.value
   );
-    console.log(index)
+
   const product = (products[index] = {
     id: newIdModify.value,
     name: newNameModify.value,
@@ -122,7 +123,8 @@ const upDateNewResults = () => {
   });
 
   products.splice(index, 1, product);
-
+  localStorage.setItem("products", JSON.stringify(products));
+  modifyMessage.innerHTML = "Modified";
   updateResults();
 };
 
