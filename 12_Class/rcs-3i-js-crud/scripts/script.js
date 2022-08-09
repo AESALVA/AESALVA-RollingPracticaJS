@@ -23,6 +23,8 @@ const ModifyButton = document
   .getElementById("modifyButton")
   .addEventListener("click", () => upDateNewResults());
 const modifyMessage = document.getElementById('newModifyModalMessage');
+const buttonClose = document.getElementById('cancelButton').addEventListener('click',()=>clearMessage());
+const closeModalButton = document.getElementById('closeModalButton').addEventListener('click',()=>clearMessage());
 
 const results = document.getElementById("results");
 
@@ -115,7 +117,7 @@ const upDateNewResults = () => {
   const index = products.findIndex(
     (product) => product.id === newIdModify.value
   );
-
+  
   const product = (products[index] = {
     id: newIdModify.value,
     name: newNameModify.value,
@@ -127,5 +129,12 @@ const upDateNewResults = () => {
   modifyMessage.innerHTML = "Modified";
   updateResults();
 };
+
+
+const clearMessage = () => {
+  modifyMessage.innerHTML = "";
+  newArticleModalMessage.innerHTML = "";
+}
+
 
 updateResults();
