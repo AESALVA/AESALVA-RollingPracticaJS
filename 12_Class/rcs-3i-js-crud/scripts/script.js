@@ -110,8 +110,7 @@ const delArticle = (product) => {
 };
 
 const findArticle = (product) => {
-  const index = products.indexOf(product);
-
+ 
   newIdModify.value = product.id;
   newNameModify.value = product.name;
   newPriceModify.value = product.price;
