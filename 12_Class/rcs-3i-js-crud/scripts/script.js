@@ -24,7 +24,7 @@ const ModifyButton = document
   .addEventListener("click", () => upDateNewResults());
 const modifyMessage = document.getElementById('newModifyModalMessage');
 const buttonClose = document.getElementById('cancelButton').addEventListener('click',()=>clearMessage());
-const closeModalButton = document.getElementById('closeModalButton').addEventListener('click',()=>clearMessage());
+const closeModalButton = document.getElementById('closeModalButton').addEventListener('click',()=>clearMessage())
 
 const results = document.getElementById("results");
 
