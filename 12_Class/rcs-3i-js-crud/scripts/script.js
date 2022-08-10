@@ -22,9 +22,13 @@ const newPriceModify = document.getElementById("priceToModify");
 const ModifyButton = document
   .getElementById("modifyButton")
   .addEventListener("click", () => upDateNewResults());
-const modifyMessage = document.getElementById('newModifyModalMessage');
-const buttonClose = document.getElementById('cancelButton').addEventListener('click',()=>clearMessage());
-const closeModalButton = document.getElementById('closeModalButton').addEventListener('click',()=>clearMessage())
+const modifyMessage = document.getElementById("newModifyModalMessage");
+const buttonClose = document
+  .getElementById("cancelButton")
+  .addEventListener("click", () => clearMessage());
+const closeModalButton = document
+  .getElementById("closeModalButton")
+  .addEventListener("click", () => clearMessage());
 
 const results = document.getElementById("results");
 
@@ -115,14 +119,17 @@ const findArticle = (product) => {
 
 const upDateNewResults = () => {
   const index = products.findIndex(
-    (product) => product.id === newIdModify.value
+    (product) =>
+      product.id === newIdModify.value ||
+      product.name === newNameModify.value ||
+      product.price === newPriceModify.value
   );
-  
-  const product = (products[index] = {
+
+  const product = {
     id: newIdModify.value,
     name: newNameModify.value,
     price: newPriceModify.value,
-  });
+  };
 
   products.splice(index, 1, product);
   localStorage.setItem("products", JSON.stringify(products));
@@ -130,11 +137,9 @@ const upDateNewResults = () => {
   updateResults();
 };
 
-
 const clearMessage = () => {
   modifyMessage.innerHTML = "";
   newArticleModalMessage.innerHTML = "";
-}
-
+};
 
 updateResults();
