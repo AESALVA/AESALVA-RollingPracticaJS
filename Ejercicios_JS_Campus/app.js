@@ -64,3 +64,42 @@
 
 
 
+// let num = [parseInt(prompt("elija un numero"))];
+
+// const condicion1 = num%2===0;
+// const condicion2 = num%3===0;
+// const condicion3 = num%5===0;
+// const condicion4 = num%7===0;
+
+// for (let i = 0; i< num.length; i++) {
+//     if (condicion1 && condicion2 && condicion3 && condicion4) {
+//         alert(`${num} es divisible por 2, 3, 5, 7`)
+//     } else if(condicion1 && condicion2 && condicion3){
+//         alert(`${num} es divisible por 2, 3, 5`)
+//     } else if (condicion1 && condicion2){
+//         alert(`${num} es divisible por 2, 3`)
+//     } else if(condicion1 && condicion3){
+//         alert(`${num} es divisible por 2, 5`)
+//     } else if(condicion1 && condicion4){
+//         alert(`${num} es divisible por 2, 7`)
+//     } else if (condicion1){
+//         alert(`${num} es divisible por 2`)
+//     } else if(condicion2 && condicion3 && condicion4){
+//         alert(`${num} es divisible por 3, 5, 7`)
+//     } else if(condicion2 && condicion3){
+//         alert(`${num} es divisible por 3, 5`)
+//     } else if(condicion2 && condicion4){
+//         alert(`${num} es divisible por 3, 7`)
+//     } else if(condicion2){
+//         alert(`${num} es divisible por 3`)
+//     } else if(condicion3 && condicion4){
+//         alert(`${num} es divisible por 5, 7`)
+//     } else if(condicion3){
+//         alert`${num} es divisible por 5`
+//     } else if(condicion4){
+//         alert(`${num} es divisible por 7`)
+//     } else {
+//         alert(`${num} no es divisible por 2, 3, 5, 7`)
+//     }
+// }
+
