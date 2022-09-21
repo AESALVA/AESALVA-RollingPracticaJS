@@ -40,10 +40,27 @@
 //     alert(`el numero ${num} no es divisible por 2` )
 //  }
 
+// let frase = prompt("frase").toUpperCase();
 
-const frase = prompt("escribe tu frase");
-const newFrase = frase.split();
-const vocales = ["a","e","i","o","u"];
-const vocales2 = ["aeiou"];
-const frase2 = newFrase.map(f=>f="a",f="e")
-console.log(frase2)
+// const vocales2 = [];
+
+// let newFrase = frase.split("");
+
+// newFrase.forEach((f) => {
+//   if (f.includes("A")) {
+//     vocales2.push(f);
+//   } else if (f.includes("U")) {
+//     vocales2.push(f);
+//   } else if (f.includes("E")) {
+//     vocales2.push(f);
+//   } else if (f.includes("O")) {
+//     vocales2.push(f);
+//   } else if (f.includes("I")) {
+//     vocales2.push(f);
+//   }
+// });
+
+// console.log(vocales2);
+
+
+
