@@ -103,3 +103,69 @@
 //     }
 // }
 
+// let n1 = prompt("Escribe un número");
+// if (n1 % 2 == 0 || n1 % 3 == 0 || n1 % 5 == 0 || n1 % 7 == 0) {
+//     if (n1 % 2 == 0) {
+//         alert("Es divisible por 2");
+//     }
+//     if (n1 % 3 == 0) {
+//         alert("Es divisible por 3");
+//     }
+//     if (n1 % 5 == 0) {
+//         alert("Es divisible por 5");
+//     }
+//     if (n1 % 7 == 0) {
+//         alert("Es divisible por 7");
+//     }
+// } else {
+//     alert("No es divisible por 2, ni por 3, ni por 5, ni por 7");
+// }
+
+
+//---------------------- Ejercicios javascript - Bucles
+
+// let edad = parseInt(prompt("cual es tu edad"));
+
+// if (edad>=18) {
+//     alert('puedes conducir')
+// } else {
+//     alert('la edad ingresada no es un numero valido')
+// }
+
+
+// let nota = parseInt(prompt('ingrese nota de 0 al 10'));
+
+// if (nota>=0 || nota<=2 || nota>=3 || nota<=4 || nota>=5 || nota<=6 || nota==7 ||nota>=8 || nota<=9 || nota==10 ) {
+//     if(nota>=0 && nota<=2){
+//         alert('muy deficiente')
+//     }
+//     if (nota>=3 && nota<=4 ) {
+//         alert('insuficiente')
+//     }
+//     if (nota>=5 && nota<=6 ) {
+//         alert('suficiente')
+//     }
+//     if (nota==7) {
+//         alert('bien')
+//     }
+//     if (nota>=8 && nota<=9) {
+//         alert('notable')
+//     }
+//     if (nota==10 ) {
+//         alert('sobresaliente')
+//     }
+//     if(nota<0 || nota>10){
+//         alert('numero erroneo')
+//    } 
+// }
+
+
+
+// const myFunction = ()=>{
+ 
+//     const text = document.getElementById('text')
+//     const parrafo = document.getElementById('parrafo')
+//     const txt = text.value.split('');
+//     parrafo.innerHTML= txt.join("-");
+// }
+
