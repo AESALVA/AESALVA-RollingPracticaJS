@@ -62,8 +62,6 @@
 
 // console.log(vocales2);
 
-
-
 // let num = [parseInt(prompt("elija un numero"))];
 
 // const condicion1 = num%2===0;
@@ -121,7 +119,6 @@
 //     alert("No es divisible por 2, ni por 3, ni por 5, ni por 7");
 // }
 
-
 //---------------------- Ejercicios javascript - Bucles
 
 // let edad = parseInt(prompt("cual es tu edad"));
@@ -131,7 +128,6 @@
 // } else {
 //     alert('la edad ingresada no es un numero valido')
 // }
-
 
 // let nota = parseInt(prompt('ingrese nota de 0 al 10'));
 
@@ -156,19 +152,16 @@
 //     }
 //     if(nota<0 || nota>10){
 //         alert('numero erroneo')
-//    } 
+//    }
 // }
 
-
-
 // const myFunction = ()=>{
- 
+
 //     const text = document.getElementById('text')
 //     const parrafo = document.getElementById('parrafo')
 //     const txt = text.value.split('');
 //     parrafo.innerHTML= txt.join("-");
 // }
-
 
 // const myFunction = ()=>{
 
@@ -188,6 +181,61 @@
 //  parrafo.innerHTML=total;
 // }
 
+// Realizar una página con un script que calcule el valor de la letra de un número de DNI (Documento nacional de identidad).
 
+// El algoritmo para calcular la letra del dni es el siguiente :
 
+// El número debe ser entre 0 y 99999999
+// Debemos calcular el resto de la división entera entre el número y el número 23.
+// Según el resultado, de 0 a 22, le corresponderá una letra de las siguientes:  (T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E)
+// Si lo introducido no es un número deberá indicarse con un alert y volver a preguntar.
+// Deberá de repetirse el proceso hasta que el usuario pulse «cancelar».
 
+// const myFunction = () => {
+//   const text = document.getElementById("text");
+//   const parrafo = document.getElementById("parrafo");
+//   const txt = text.value.split("");
+//   const numbers = [];
+//   txt.map((t) => {
+//     if (!isNaN(parseInt(t)) && t != null) {
+//       if (parseInt(t) >= 0 && parseInt(t) <= 99999999) {
+//         numbers.push(parseInt(t));
+//       } else {
+//         alert(`${t} no es un numero de DNI valido`);
+//       }
+//     }
+//     text.value='';
+//   });
+//   const results = parseInt(numbers.join(''));
+
+//   if (results >=0 && results <= 99999999) {
+//   const result = parseInt(results) % 23;
+//   result === 0 && alert("T");
+//   result === 1 && alert("R");
+//   result === 2 && alert("W");
+//   result === 3 && alert("A");
+//   result === 4 && alert("G");
+//   result === 5 && alert("M");
+//   result === 6 && alert("Y");
+//   result === 7 && alert("F");
+//   result === 8 && alert("P");
+//   result === 9 && alert("D");
+//   result === 10 && alert("X");
+//   result === 11 && alert("B");
+//   result === 12 && alert("N");
+//   result === 13 && alert("J");
+//   result === 14 && alert("Z");
+//   result === 15 && alert("S");
+//   result === 16 && alert("Q");
+//   result === 17 && alert("V");
+//   result === 18 && alert("H");
+//   result === 19 && alert("L");
+//   result === 20 && alert("C");
+//   result === 21 && alert("K");
+//   result === 22 && alert("E");
+//   } else {
+//     alert(`${results} no es un numero de DNI valido`);
+//   }
+  
+  
+// };
