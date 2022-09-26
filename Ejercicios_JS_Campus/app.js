@@ -241,11 +241,24 @@
 // };
 
 
-for (let i = 1; i <= 30; i++) {
+// for (let i = 1; i <= 30; i++) {
     
-    for (let rep = 0; rep < i; rep++) {
+//     for (let rep = 0; rep < i; rep++) {
         
-        document.write(i);
-    }
-    document.write("<br>");
-}
+//         document.write(i);
+//      }
+//      document.write("<br>");
+//  }
+
+
+
+// let number = parseInt(prompt('elije un numero'))
+
+// for (let i = number; i > 1; i--) {
+    
+//      for (let rep = 0; rep < i; rep++) {
+        
+//          document.write(number);
+//      }
+//      document.write("<br>");
+//     }z
