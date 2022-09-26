@@ -258,7 +258,23 @@
     
 //      for (let rep = 0; rep < i; rep++) {
         
-//          document.write(number);
+//          document.write(i);
 //      }
 //      document.write("<br>");
-//     }z
+//     }
+
+
+
+// let number = parseInt(prompt('elije un numero'))
+
+
+
+//  for (let i = 1; i <= number; i++) {
+    
+//      for (let rep = 0; rep < i; rep++) {
+        
+//          document.write(i);
+//       }
+//       document.write("<br>");
+      
+//   }
