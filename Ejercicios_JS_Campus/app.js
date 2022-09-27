@@ -334,4 +334,22 @@
 // }
 
 
+//  let number = Math.floor(Math.random()*(99 - 1) + 1);
+
+//  console.log(number);
+
+
+// let text = prompt('introduzca su texto aqui');
+
+// alert(`${text.toLocaleUpperCase()}`);
+
+
+
+//  const text = prompt('introduzca su texto aqui');
+
+//  const txt = text.split('');
+
+// const txto = txt.join('-');
+
+// console.log(txto);
 
