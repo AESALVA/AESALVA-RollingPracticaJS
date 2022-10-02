@@ -362,38 +362,38 @@
 
 // 17- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado.
 
-let texto = prompt("ingrese un texto").toLowerCase();
-let vocales = ["a", "e", "i", "o", "u"];
-let posición = 0;
-let stop = false;
-// const txt = texto.split("");
+// let texto = prompt("ingrese un texto").toLowerCase();
+// let vocales = ["a", "e", "i", "o", "u"];
+// let posición = 0;
+// let stop = false;
+// // const txt = texto.split("");
 
-// txt.map((t, i) => {
-//    t == "A" && console.log(i);
-//    t == "E" && console.log(i);
-//    t == "I" && console.log(i);
-//    t == "O" && console.log(i);
-//    t == "U" && console.log(i);
+// // txt.map((t, i) => {
+// //    t == "A" && console.log(i);
+// //    t == "E" && console.log(i);
+// //    t == "I" && console.log(i);
+// //    t == "O" && console.log(i);
+// //    t == "U" && console.log(i);
 
    
-//  });
+// //  });
 
-for (let i = 0; i < texto.length; i++) {
-    for (let p = 0; p < vocales.length; p++) {
-        if(vocales[p] === texto.charAt(i)){
-            posición = i;
-            stop = true;
-            break;
-        }
-    }
-    if(stop){
-        break;
-    }
-}
-if (stop != true) {
-    document.write(`La palabra ingresada no tiene vocales` );
+// for (let i = 0; i < texto.length; i++) {
+//     for (let p = 0; p < vocales.length; p++) {
+//         if(vocales[p] === texto.charAt(i)){
+//             posición = i;
+//             stop = true;
+//             break;
+//         }
+//     }
+//     if(stop){
+//         break;
+//     }
+// }
+// if (stop != true) {
+//     document.write(`La palabra ingresada no tiene vocales` );
 
-} else {
-    document.write(`La primera vocal '${texto.charAt(posición)}' está en la posición ${posición}` );
+// } else {
+//     document.write(`La primera vocal '${texto.charAt(posición)}' está en la posición ${posición}` );
 
-}
+// }
