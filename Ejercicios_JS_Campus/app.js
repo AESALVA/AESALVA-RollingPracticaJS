@@ -236,52 +236,43 @@
 //   } else {
 //     alert(`${results} no es un numero de DNI valido`);
 //   }
-  
-  
+
 // };
 
-
 // for (let i = 1; i <= 30; i++) {
-    
+
 //     for (let rep = 0; rep < i; rep++) {
-        
+
 //         document.write(i);
 //      }
 //      document.write("<br>");
 //  }
 
-
-
 // let number = parseInt(prompt('elije un numero'))
 
 // for (let i = number; i > 1; i--) {
-    
+
 //      for (let rep = 0; rep < i; rep++) {
-        
+
 //          document.write(i);
 //      }
 //      document.write("<br>");
 //     }
 
-
-
 // let number = parseInt(prompt('elije un numero'))
 
-
-
 //  for (let i = 1; i <= number; i++) {
-    
+
 //      for (let rep = 0; rep < i; rep++) {
-        
+
 //          document.write(i);
 //       }
 //       document.write("<br>");
-      
+
 //   }
 
-
 // for (let i = 1; i < 500; i++) {
-    
+
 //     if (i%4===0) {
 //         document.write(`${i} (multiplo de 4)`);
 //     }else if(i%9===0) {
@@ -291,14 +282,12 @@
 //     } else {
 //         document.write(i)
 //     }
-    
+
 //     document.write("<br>");
 // }
 
-
 // let filas = parseInt(prompt('elija nro de filas'));
 // let columnas = parseInt(prompt('elija el nro de columnas'));
-
 
 // let total = filas * columnas;
 
@@ -308,7 +297,7 @@
 
 //     for(let indiceColumna=0; indiceColumna< columnas; indiceColumna++){
 //         document.write('<td>'+total+'</td>');
-//          total--; 
+//          total--;
 //     }
 //     document.write('</tr>');
 // }
@@ -333,17 +322,13 @@
 //     document.write(`el mayor es ${nombre3}`)
 // }
 
-
 //  let number = Math.floor(Math.random()*(99 - 1) + 1);
 
 //  console.log(number);
 
-
 // let text = prompt('introduzca su texto aqui');
 
 // alert(`${text.toLocaleUpperCase()}`);
-
-
 
 //  const text = prompt('introduzca su texto aqui');
 
@@ -353,3 +338,62 @@
 
 // console.log(txto);
 
+// const texto = prompt('ingrese un texto').toUpperCase();
+
+// const txt = texto.split('');
+
+// let number = 0;
+
+// txt.map(t=>{
+//     if (t=="A" || t=="E" || t=="I" || t=="O" || t=="U") {
+//         number++;
+//     }
+// })
+
+// document.write(`el numero de vocales son ${number}`);
+
+// const texto = prompt('ingrese un texto');
+
+// const txt = texto.split('').reverse();
+
+// const newTxt = txt.join('')
+
+// document.write(newTxt)
+
+// 17- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado.
+
+let texto = prompt("ingrese un texto").toLowerCase();
+let vocales = ["a", "e", "i", "o", "u"];
+let posición = 0;
+let stop = false;
+// const txt = texto.split("");
+
+// txt.map((t, i) => {
+//    t == "A" && console.log(i);
+//    t == "E" && console.log(i);
+//    t == "I" && console.log(i);
+//    t == "O" && console.log(i);
+//    t == "U" && console.log(i);
+
+   
+//  });
+
+for (let i = 0; i < texto.length; i++) {
+    for (let p = 0; p < vocales.length; p++) {
+        if(vocales[p] === texto.charAt(i)){
+            posición = i;
+            stop = true;
+            break;
+        }
+    }
+    if(stop){
+        break;
+    }
+}
+if (stop != true) {
+    document.write(`La palabra ingresada no tiene vocales` );
+
+} else {
+    document.write(`La primera vocal '${texto.charAt(posición)}' está en la posición ${posición}` );
+
+}
