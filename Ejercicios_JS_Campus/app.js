@@ -375,7 +375,6 @@
 // //    t == "O" && console.log(i);
 // //    t == "U" && console.log(i);
 
-   
 // //  });
 
 // for (let i = 0; i < texto.length; i++) {
@@ -397,3 +396,148 @@
 //     document.write(`La primera vocal '${texto.charAt(posición)}' está en la posición ${posición}` );
 
 // }
+
+//EJERCICIOS JS ------------------
+
+// 1- Crear un array llamado meses y que almacene el nombre de los doce meses del año. Mostrar por pantalla en forma de lista  los doce nombres del arreglo.
+
+// const meses = [
+//   "enero",
+//   "febrero",
+//   "marzo",
+//   "abril",
+//   "mayo",
+//   "junio",
+//   "julio",
+//   "agosto",
+//   "septiembre",
+//   "octubre",
+//   "noviembre",
+//   "diciembre",
+// ];
+
+// const lista = document.getElementById("parrafo");
+
+// meses.map((m) => {
+//   const list = document.createElement("ul");
+//   list.innerHTML = `<li>${m}</li>`;
+//   lista.appendChild(list);
+// });
+
+// 2-  Crear un script que solicite al usuario mediante un prompt el nombre de ciudades y almacenarlas en un arreglo,
+// cuando el usuario selecciona cancelar se debe mostrar el arreglo generado, luego realizar las siguientes acciones:
+
+// Mostrar la longitud del arreglo.
+// Mostrar en el documento web los ítems de las posiciones primera, tercera y última.
+// Añade en última posición la ciudad de París.
+// Escribe por pantalla el elemento que ocupa la segunda posición.
+// Sustituye el elemento que ocupa la segunda posición por la ciudad de 'Barcelona'.
+
+//   let cities = [];
+//   let exit = true;
+//   do {
+//    let city = prompt('escriba el nombre de ciudades');
+// if (city ===  null) {
+//    exit = false;
+// } else {
+//    cities.push(city);
+//    console.log(city)
+// }
+//   } while (exit);
+
+// document.write(cities.length);
+
+// document.write(cities[0]);
+// document.write(cities[2]);
+// document.write(cities[cities.length - 1]);
+
+// let newCity = 'Paris';
+
+// cities.push(newCity);
+// console.log(cities);
+
+// document.write(cities[1]);
+
+// cities[1] = 'Barcelona';
+
+// console.log(cities)
+
+// 3- Escribir un script que simule el lanzamiento de dos dados.
+// Hacer uso de la función Math.random para obtener números aleatorios entre 1 y 6 para cada uno de los lanzamientos de los dados.
+//  Sumar el resultado de lanzar dos dados y anotar en un array el número de apariciones de dicha suma, repitiendo 50 veces esta operación.
+
+// let suma = [];
+
+// for (let i = 100; i > suma.length; i--) {
+//   let dado1 = Math.floor(Math.random() * 7);
+//   let dado2 = Math.floor(Math.random() * 7);
+//   let sum = dado1 + dado2;
+//   suma.push(sum);
+// }
+
+// console.log(suma);
+
+// FUNCIONES
+
+//1- Escribir el código de una función a la que se pasa como parámetro un número entero y
+//devuelve como resultado una cadena de texto que indica si el número es par o impar. Mostrar por pantalla el resultado devuelto por la función.
+
+// function myFunction(number) {
+//    if (number%2===0) {
+//       document.write(`el numero ${number} es par`)
+//    } else {
+//       document.write(`el numero ${number} es impar`)
+//    }
+// }
+
+// myFunction(8);
+// myFunction(9);
+// myFunction(36);
+// myFunction(13);
+// myFunction(36);
+// myFunction(99);
+
+// 2- Definir una función que muestre información sobre una cadena de texto que se le pasa como argumento. A partir de la cadena que se le pasa,
+//la función determina si esa cadena está formada sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas.
+
+// function myFunction(cadena) {
+//   if (cadena === cadena.toUpperCase()) {
+//     document.write(`el texto ${cadena} esta formado solo por mayusculas`);
+//   } else if (cadena === cadena.toLowerCase()) {
+//     document.write(`el texto ${cadena} esta formado por minusculas`);
+//   } else {
+//     document.write(`el texto ${cadena} esta formado por una mezcla de ambas`);
+//   }
+// }
+
+// myFunction("Hola");
+// myFunction("EDUARDO");
+// myFunction("hola");
+
+// 3- Solicitar por pantalla al usuario ingresar el valor de los lados de un rectángulo, luego crear una función para calcular su perímetro y mostrarlo por pantalla.
+
+// La fórmula del perímetro  es p = 2*(a +b)
+
+// let a = parseInt(prompt("ingrese la medida de la base del rectangulo"));
+// let b = parseInt(prompt("ingrese la medida de la altura del rectangulo"));
+
+// function perimetro(a, b) {
+//   p = 2*(a + b);
+//   document.write(`el perimetro del rectangulo es ${p}`);
+// }
+
+// perimetro(a, b);
+
+// 4- Escriba un script que muestre la tabla de multiplicar de un número ingresado por pantalla,
+// la creación de la tabla debe ser realizada con una función y mostrar solo los resultados del 1 al 10 del número elegido por el usuario.
+
+// let number = parseInt(prompt("ingrese el numero de la tabla que desea:"));
+
+// function myFunction(a) {
+//   for (let i = 1; i < 11; i++) {
+//     let result = a * i;
+//     document.write(result);
+//   }
+// }
+
+// myFunction(number);
